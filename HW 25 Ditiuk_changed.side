@@ -1,0 +1,239 @@
+{
+  "id": "5a50146b-7354-4565-b124-b40688ea403f",
+  "version": "2.0",
+  "name": "HW 25 Ditiuk",
+  "url": "https://www.amazon.com/",
+  "tests": [{
+    "id": "7bd91102-9d0b-4f70-bb7d-a6c73c244275",
+    "name": "Перевірка пошуку товару",
+    "commands": [{
+      "id": "50bcebeb-1eb1-4df5-b9f3-ef299ef853bf",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0b8a7436-b23e-47de-af90-eeb035761859",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=twotabsearchtextbox",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "64556a0c-8b9c-4675-8b73-7a8922be345b",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [],
+      "value": "laptop"
+    }, {
+      "id": "dcd9e087-d79a-47ba-8e1c-6396a0e69b2e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Go']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9c4640bf-c812-4e15-aaac-5ee5b679f0bb",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "1515bdef-ed47-46fd-a6d9-2880c652a07a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1dc8d06b-a1a3-4d15-8948-5f3b3829a5bd",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//span[@class='a-size-medium a-color-base a-text-normal'])[1]",
+      "targets": [],
+      "value": "firstResult"
+    }, {
+      "id": "06d7f1a7-4f27-478b-8e29-f1e75a89c3a4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='a-size-medium a-color-base a-text-normal'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "417367f1-e5ec-45f0-8bc5-cc85ad17306f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=h1#title",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "4af04f76-9f67-442c-870e-1a6c9ae21491",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1#title",
+      "targets": [],
+      "value": "${firstResult}"
+    }]
+  }, {
+    "id": "7e304ef3-79ab-4be9-9d85-6cb0f0422ff6",
+    "name": "Перевірка пошуку товарів по ФІЛЬТРУ Good value",
+    "commands": [{
+      "id": "ac4bbac9-70a6-4499-9d9e-53c3f7c2f3fa",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "923be27a-c09b-4381-baa1-c4edc27c0bee",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=twotabsearchtextbox",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "070f1cc9-a4fe-4735-92b6-965026477ced",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [],
+      "value": "smartphone"
+    }, {
+      "id": "a49c44a7-da88-4f04-9d37-603856262c0c",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Go']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8fa0c736-00df-40f1-acd1-6ec1b7ecc267",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "46c83e4c-063e-40f2-aea2-ff296b1ec776",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f5587aec-ee96-460c-a1b0-2d6e932c9c00",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Good Value']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12631181-e2f7-4e6d-94a6-536cb4b9cc56",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "d6139377-3ba1-4c6d-86ed-91f788a4ebf3",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//span[@class='a-size-medium a-color-base a-text-normal'])[1]",
+      "targets": [],
+      "value": "filteredResult"
+    }, {
+      "id": "124276a1-46ec-423f-a7b6-f57834048fbf",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='a-size-medium a-color-base a-text-normal'])[1]",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "a8a2f298-44bc-4fa8-8394-7e872fa76ac0",
+    "name": "Перевірка пошуку товарів по ФІЛЬТРУ Great Phone",
+    "commands": [{
+      "id": "f81b85ba-6b96-4d46-8b9c-06896c624b1a",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.amazon.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77424a2c-916d-4216-866f-f0c85311b885",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=twotabsearchtextbox",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "08e4480b-2857-4f98-9d0c-8f37f0524e26",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [],
+      "value": "smartphone"
+    }, {
+      "id": "0e5493b6-8846-4e1a-9570-3c7c4166b57b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Go']",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "70bdc97d-a75b-4ef2-96cc-0d9698c9c532",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e258307-ee3f-4792-8411-4cd9c838d688",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[text()='Great Phone']",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2c92ccf-28dc-42bd-8f2e-de8d54292c2a",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//span[contains(text(),'results for')]",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "66e367d3-ab5a-4b8f-a624-21109cabf7a5",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=(//span[@class='a-size-medium a-color-base a-text-normal'])[1]",
+      "targets": [],
+      "value": "filteredResult"
+    }, {
+      "id": "02daf719-b2a4-4353-9efe-e122e0476649",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@class='a-size-medium a-color-base a-text-normal'])[1]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17b8d3a9-9377-47e6-8bfd-eaef9801f1e6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1#title",
+      "targets": [],
+      "value": "${filteredResult}"
+    }]
+  }],
+  "suites": [{
+    "id": "bae9b6c2-590f-49ba-ace1-0d813ff9d6a2",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7bd91102-9d0b-4f70-bb7d-a6c73c244275"]
+  }],
+  "urls": ["https://www.amazon.com/"],
+  "plugins": []
+}
